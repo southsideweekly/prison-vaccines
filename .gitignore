@@ -1,0 +1,11 @@
+.DS_Store
+.env*
+!/.env.sample
+.vscode
+node_modules
+dist/
+site/_includes/*.js
+site/_includes/*.css
+site/_includes/webpack.njk
+site/img/*
+!site/img/.keep

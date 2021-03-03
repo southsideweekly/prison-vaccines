@@ -1,0 +1,52 @@
+.content {
+  @apply block max-w-screen-md mx-auto px-3;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.content p:not(:last-child),
+.content ul:not(:last-child),
+.content blockquote:not(:last-child) {
+  @apply mb-6;
+}
+
+.content li + li {
+  @apply mt-2;
+}
+
+/* .content h3,
+.content h4,
+.content h5,
+.content h6 {
+  @apply font-bold;
+} */
+
+.content h1 {
+  @apply text-2xl mt-5 mb-2;
+}
+
+.content h2 {
+  @apply text-xl mt-4 mb-2;
+}
+
+.content h3 {
+  @apply text-lg mt-3 mb-1;
+}
+
+.content h1:first-child,
+.content h2:first-child,
+.content h3:first-child {
+  @apply mt-0;
+}
+
+.content ul {
+  @apply mt-4;
+
+  padding-inline-start: theme("spacing.4");
+  list-style: disc outside;
+}
+
+main.content {
+  @apply w-full max-w-screen-md px-3 mx-auto flex-1;
+}

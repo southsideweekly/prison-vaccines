@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .article-bg-image-container {
+    @apply sticky h-screen max-h-full top-0 flex flex-row items-center justify-center transition-all duration-200;
+  }
+
+  /* TODO: object-fit cover and force height slightly taller on small screens? */
+  .article-bg-image {
+    @apply w-full max-w-full max-h-screen;
+
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  @screen md {
+    .article-bg-image {
+      object-fit: contain;
+    }
+  }
+
+  .article-section {
+    @apply relative w-full mt-0;
+  }
+
+  .article-content-container {
+    @apply relative max-w-screen-md pb-24 mx-auto z-10;
+  }
+
+  .article-content {
+    @apply py-5 px-3 bg-white mb-10;
+  }
+}

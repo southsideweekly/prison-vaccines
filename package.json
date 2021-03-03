@@ -1,0 +1,86 @@
+{
+  "name": "prison-vaccines",
+  "version": "0.1.0",
+  "author": "Pat Sier",
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write **/*.{js,css} !dist",
+    "start": "NODE_ENV=development run-p -l start:*",
+    "start:eleventy": "eleventy --serve",
+    "start:rollup": "rollup --config rollup.config.js -w",
+    "start:postcss": "postcss ./src/css -d ./site/_includes -w",
+    "build": "NODE_ENV=production run-s -l build:*",
+    "build:clean": "rm -rf dist",
+    "build:rollup": "rollup --config rollup.config.js",
+    "build:postcss": "postcss ./src/css -d ./site/_includes",
+    "build:webpack": "webpack --config webpack.config.js",
+    "build:eleventy": "eleventy",
+    "lint": "eslint ./src/js/**/*.js",
+    "style": "prettier --check src/**/**.{js,css}",
+    "analyze": "source-map-explorer dist/**/*.js dist/**/*.js.map"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-img": "^0.8.0",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-import": "^2.22.0",
+    "esm": "^3.2.25",
+    "file-loader": "^6.0.0",
+    "html-minifier": "^4.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "markdown-it": "^11.0.0",
+    "markdown-it-link-attributes": "^3.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.32",
+    "postcss-import": "^12.0.1",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "rollup": "^2.26.3",
+    "rollup-plugin-terser": "^7.0.0",
+    "source-map-explorer": "^2.4.2",
+    "tailwindcss": "^1.9.6",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "classlist-polyfill": "^1.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "import"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  }
+}

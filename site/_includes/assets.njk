@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://use.typekit.net/fwc0dpy.css">
+
+{%- set css -%}
+  {%- includefile "style.css" -%}
+  {%- if style -%}
+    {%- includefile style -%}
+  {%- endif -%}
+{%- endset -%}
+
+<style type="text/css">{{ css | safe }}</style>
+
+<script type="module">{% include "index.js" %}</script>
+
+{% if site.environment != "development" %}
+  {% include "webpack.njk" %}
+{% endif %}

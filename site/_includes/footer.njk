@@ -1,0 +1,19 @@
+{# TODO: Remove Nav #}
+<footer class="flex flex-row items-center justify-center py-5 mt-5 bg-gray-200">
+  <div class="max-w-screen-md px-3 flex flex-row flex-wrap items-start justify-between flex-grow">
+    <div>
+      <p>
+        {{ site.name }}
+      </p>
+    </div>
+    <div>
+      <ul>
+        {# {% for link in site.nav %}
+        <li>
+          <a href="{{ link.url }}" {% if link.url[0] != "/" %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+        </li>
+        {% endfor %} #}
+      </ul>
+    </div>
+  </div>
+</footer>

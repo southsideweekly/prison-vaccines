@@ -1,0 +1,100 @@
+html,
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body {
+  @apply flex flex-col min-h-screen font-serif text-xl;
+
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif font-bold;
+}
+
+a {
+  @apply text-blue-600;
+
+  text-decoration: none;
+}
+
+a:active,
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden-focusable:not(:focus) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+#nav .logo {
+  max-width: 250px;
+}
+
+#close-modal {
+  @apply text-lg w-6 h-6 leading-none rounded-full bg-black text-white font-bold;
+
+  font-family: sans-serif;
+}
+
+#close-modal:active,
+#close-modal:hover,
+#close-modal:focus {
+  @apply text-red-500;
+}
+
+.content .article-title {
+  @apply text-3xl font-normal;
+
+  line-height: 1.1;
+}
+
+@screen md {
+  .content .article-title {
+    @apply text-5xl;
+  }
+}
+
+.dropcap p:first-child:first-letter {
+  @apply float-left m-0 text-red-700;
+
+  font-size: 3.2em;
+  line-height: 0.4em;
+  padding-right: 0.1em;
+  padding-top: 0.1em;
+}
