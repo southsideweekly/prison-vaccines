@@ -50,3 +50,15 @@
 main.content {
   @apply w-full max-w-screen-md px-3 mx-auto flex-1;
 }
+
+.portrait-grid {
+  @apply flex flex-row flex-wrap;
+}
+.portrait-grid button {
+  @apply mr-2 mb-2;
+}
+.portrait-grid button:hover,
+.portrait-grid button:focus,
+.portrait-grid button:active {
+  filter: brightness(70%);
+}

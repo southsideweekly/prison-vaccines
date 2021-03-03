@@ -4,14 +4,16 @@
 
 @layer components {
   .article-bg-image-container {
-    @apply sticky h-screen max-h-full top-0 flex flex-row items-center justify-center transition-all duration-200;
+    @apply sticky h-screen max-h-full top-0 flex items-center justify-center;
+
+    filter: blur(0);
+    transition: filter 0.2s ease-in-out;
   }
 
   /* TODO: object-fit cover and force height slightly taller on small screens? */
   .article-bg-image {
-    @apply w-full max-w-full max-h-screen;
+    @apply w-full max-w-full max-h-screen z-0;
 
-    z-index: -1;
     object-fit: cover;
   }
 
@@ -23,6 +25,12 @@
 
   .article-section {
     @apply relative w-full mt-0;
+  }
+
+  @screen md {
+    .article-section {
+      @apply my-20;
+    }
   }
 
   .article-content-container {

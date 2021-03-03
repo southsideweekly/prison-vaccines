@@ -3,7 +3,8 @@ import { focusOnFirstChild, onFocusModalTrap } from "./utils"
 function setupScrollBlur(el) {
   const targetEl = document.getElementById(el.dataset.scrollBlur)
 
-  const ratio = 0.25
+  // Different ratios to handle weird iOS bug
+  const ratio = window.innerWidth > 600 ? 0.25 : 0.025
   const threshold = [ratio]
 
   const handleIntersect = (entries) => {
