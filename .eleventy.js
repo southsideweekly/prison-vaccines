@@ -3,6 +3,7 @@ require("dotenv").config()
 const fs = require("fs")
 const path = require("path")
 const Image = require("@11ty/eleventy-img")
+const { baseurl } = require("./site/_data/site")
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -17,9 +18,10 @@ async function resizeImage(src, sizes, outputFormat = "png") {
 
 async function imageShortcode(src, alt, sizes, cls = "") {
   let metadata = await Image(src, {
-    widths: [500, 768],
+    widths: [500, 1024],
     formats: ["webp", "jpeg"],
     outputDir: "./site/img",
+    urlPath: `${baseurl}/img/`,
   })
   return Image.generateHTML(metadata, {
     alt,
@@ -74,7 +76,6 @@ module.exports = function (eleventyConfig) {
   )
 
   eleventyConfig.addPassthroughCopy({
-    "src/img": "img",
     "site/img": "img",
   })
 

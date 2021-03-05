@@ -4,15 +4,20 @@ permalink: /
 title: "Inmates at Stateville Correctional Center describe COVID-19 behind bars"
 ---
 <article>
+{% image "./src/img/collage.jpg", "page", "100vw", "max-w-screen-lg w-full mx-auto" %}
 <div class="content text-center border-b pb-6 mb-12 border-black">
     <h1 class="article-title">
         Inmates at Stateville Correctional Center describe COVID-19 behind bars: ‘Everything that was done felt like a punishment’
     </h1>
-    <h2 class="font-normal italic">
+    <h2 class="article-subtitle">
         “I fear more of us will perish due to incompetence, neglect and apathy,” said Williams La’Roy Peeples Jr.
     </h2>
-    <p class="font-sans uppercase">
-        By Madison Muller and Cheyanne M. Daniels
+    <p class="byline">
+        By
+        {# TODO: Fix author URLs #}
+        <a href="https://southsideweekly.com/author/TK/" target="_blank" rel="noopener">Madison Muller</a>
+        and
+        <a href="https://southsideweekly.com/author/TK/" target="_blank" rel="noopener">Cheyanne M. Daniels</a>
     </p>
 </div>
 <div class="dropcap content">
@@ -24,8 +29,10 @@ At the start of the pandemic, Cloutier said he would fill several bags with disc
 Everything he gathers goes into an unused room, where used PPE has been amassing since the beginning of the coronavirus pandemic.
 {% endmdBlock %}
 </div>
+
 <div class="article-section">
     <div id="bg-doc-1" class="article-bg-image-container">
+    {# TODO: Fix image resizing #}
         {% image "./src/img/responses/page-49.jpg", "page", "100vw", "article-bg-image" %}
     </div>
 
@@ -37,24 +44,23 @@ On March 24, 2020, the Illinois Department of Corrections [reported](https://www
 It wasn’t long before those cases multiplied, killing hundreds of people incarcerated in Illinois correctional facilities. 
 
 “I have seen people I laughed with behind these walls die within the last year because of this virus,” said thirty-five year old Stateville inmate Benard McKinley.
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 According to IDOC data, among the 1,091 inmates at Stateville, there have been 302 positive coronavirus cases and twelve deaths. 
 
-Incarcerated individuals are five and a half times more likely to test positive for COVID-19 and three times more likely to die from it than the general public, according to the [University of Chicago Law Review Online](https://lawreviewblog.uchicago.edu/2020/11/16/covid-dolovich/).
 {% endmdBlock %}
-        </div>
-        <div class="content article-content">
+<div class="side-block right">
+    <button class="portrait-button" data-modal-section="james-soto">
+        <img class="bg-gray-700" src="{% resizeImage './src/img/portraits/James Soto.jpg', '500x500' %}">
+    </button>
+    <a class="mx-auto" href="#gallery">See more letters &#8675;</a>
+</div>
 {% mdBlock %}
+Incarcerated individuals are five and a half times more likely to test positive for COVID-19 and three times more likely to die from it than the general public, according to the [University of Chicago Law Review Online](https://lawreviewblog.uchicago.edu/2020/11/16/covid-dolovich/).
+
 In an effort to mitigate prison infection rates, Gov. J.B. Pritzker began granting clemencies in March 2020. 
 
 “Governor Pritzker very likely saved a lot of lives through the clemencies he granted last year and I truly believe he will save some by getting us vaccinated sooner rather than later,” said Quayshaun Bailey, twenty-eight, an inmate at Stateville Correctional Center in Joliet, Illinois.  
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 With the COVID-19 vaccine rollout underway, Pritzker announced on Jan. 18 that corrections workers and inmates would be included along with residents over sixty-five, first responders and education workers in Phase 1b of the state’s distribution plan. [Phase 1b](https://coronavirus.illinois.gov/s/phase-1b) began on Jan. 25. Illinois Department of Corrections spokeswoman Lindsey Hess said in an email that IDOC would not begin vaccinating until mid-February. 
 
 Inmates at Stateville Correctional Center were preparing for the arrival of the vaccine in early February. 
@@ -76,24 +82,15 @@ South Side Weekly sent inmates at Stateville questions about their experiences d
 Despite receiving educational materials about the vaccine, distrust of prison officials and strained relationships with prison medical services complicate some the thirteen inmates’ feelings about getting vaccinated against COVID-19. 
 
 But while not entirely enthusiastic about the vaccine, they fear the alternative is worse.
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 “For me it’s not a matter of trust per say,” Stateville inmate William La’Roy Peeples Jr., fifty-six, wrote in his response. “It is about me feeling safer taking it, than trapped behind steel and concrete with the virus running rampant and having zero protection from it.”
 
 Inside overcrowded prisons, it is nearly impossible to social distance. Inmates have seen prison officials disregard safety precautions and ignore pleas for help. 
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 In an effort to mitigate prison infection rates, Gov. J.B. Pritzker began granting clemencies in March 2020. 
 
 “Governor Pritzker very likely saved a lot of lives through the clemencies he granted last year and I truly believe he will save some by getting us vaccinated sooner rather than later,” said Quayshaun Bailey, twenty-eight, an inmate at Stateville Correctional Center in Joliet, Illinois.  
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 Cloutier said that until recently those who were showing symptoms were sent to an area of the prison known as F-House. That’s a problem, he said, because F-House was also where inmates who worked in Stateville’s kitchen, preparing food for the entire institution, were placed. 
 
 F-House was closed in 2016 for health and safety [concerns](https://static1.squarespace.com/static/5beab48285ede1f7e8102102/t/5d03e3341abad300017622d0/1560535860759/JHA_Stateville_Monitoring_Report+2011.pdf)—none of which were rectified, according to the watchdog group John Howard Association of Illinois—but was reopened in May to house sick inmates.
@@ -103,6 +100,8 @@ F-House was closed in 2016 for health and safety [concerns](https://static1.squa
         </div>
     </div>
 </div>
+
+{# TODO: Pull quote? #}
 
 <div class="article-section">
     <div id="bg-doc-3" class="article-bg-image-container">
@@ -119,26 +118,17 @@ Most troubling for some inmates is the risk prison staff pose. According to the 
 Stateville Correctional Center and IDOC did not respond to repeated requests for additional comment or information.
 
 “By not adhering to their own rules proves my life is not their priority,” said forty-year-old inmate LeShun Smith. “The staff brought the virus in.”
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 A recent [study](https://whistleblower.org/wp-content/uploads/2020/04/Irvine_JUH_ICE_COVID19_model.pdf) found that once COVID-19 enters a detention facility, it will infect between seventy-seven and ninety-nine percent of detainees within three months. Illinois has more than 30,000 inmates, according to the most recent Illinois Department of Corrections adult population [report](https://www2.illinois.gov/idoc/reportsandstatistics/Documents/October%20Fact%20Sheet.pdf). More than half of Illinois’ inmates are Black, meaning they face [additional barriers](https://www.cdc.gov/nchs/data/hus/hus15.pdf) to receiving proper medical care and are more susceptible to contracting, and dying, from the virus.  
 
 “Long before the pandemic, medical treatment in prison were way less than subpar,” said Smith. “Even after exposure they continue letting us fall by the wayside because we’re convicted criminals. They believe that our conviction nullifies our rights as U.S. citizens.”
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 While prisons are required to provide medical care for inmates, it is not unusual for incarcerated people to receive inadequate health care, even resulting in some deaths. The problem is compounded by the fact that [forty percent](https://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf) of inmates have chronic health conditions. 
 
 Travis Dortch, fifty-three, who has Type 2 diabetes and hypertension, said he gets his medicine late, sometimes going weeks without it.
 
 “I would complain—but my will and spirit is broken to just have the little I have,” he said.
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 Many prisons do not allow sick inmates to go to a medical unit unless they have sent in a written request and received permission—which can take up to five days, according to the [Prison Fellowship](https://www.prisonfellowship.org/resources/training-resources/in-prison/faq-medical-care/). Time is something those infected with COVID-19 do not have. 
 
 Broderick Hollins Sr., forty, was hospitalized for COVID in May before being moved to Stateville’s medical unit for twenty-seven days. He remains on medication as he recovers but said he still fears for his life. 
@@ -160,24 +150,15 @@ Hollins wrote that nurses are among the only prison employees who enforce mask w
 While so many Americans struggled to adjust to the realities of life during the pandemic, for inmates these realities were exacerbated by an uncompromising penal system. 
 
 Visitation with loved ones was suspended, according to Stateville’s website, access to technology was further limited and movement was almost nonexistent. 
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 “For months and months, the facility didn’t prioritize my health and wellbeing,” Lynn Green, forty, wrote. “The facility functioned more like a disciplinary lockdown, than a quarantine. We were handcuffed everywhere we went and patted down by staff with the same gloves as they searched us.”
 
 Isolation and inaccessibility to the few privileges usually afforded to inmates at Stateville are, for many the thirteen inmates, the most unbearable aspects of the pandemic. And although mental health counselors have a weekly check-in with inmates, Dortch said it’s hard to open up to them.
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 “How can you tell someone who you know does not care if you live or die, about your mental problems,” Dortch wrote.
 
 Dortch said efforts to distract himself are futile as he worries about the toll COVID-19 has on his loved ones. His mother has been hospitalized four times during this unprecedented time.
-{% endmdBlock %}
-        </div>
-        <div class="content article-content">
-{% mdBlock %}
+
 “I have become numb to the death of people daily – thinking I could be next,” he said. 
 
 “There is only hope in the unseen, which tomorrow brings the COVID-19 death toll with another thousand down – and I pray I’m not next. Keep me safe in the thoughts of the innocent until relief comes.”  
@@ -187,7 +168,7 @@ Dortch said efforts to distract himself are futile as he worries about the toll 
 </div>
 
 <div class="content">
-    <p class="text-center text-red-600">
+    <p aria-hidden="true" class="text-center text-red">
         ✶ ✶ ✶ ✶
     </p>
 {% mdBlock %}
@@ -196,13 +177,12 @@ _Repeated requests for comment from Gov. J.B. Pritzker’s office; Lindsey Hess,
 </div>
 </article>
 
-<div class="portrait-grid">
-{# TODO: aria-attributes for controlling modal #}
+<div id="gallery" class="portrait-grid">
     {% for response in responses %}
     <button class="portrait-button" data-modal-section="{{ response.id }}">
         {% set portrait %}./src/img/portraits/{{ response.image }}{% endset %}
         {% set portraitAlt %}Illustration of {{ response.name }}{% endset %}
-        {% image portrait, portraitAlt, "50vw, 100vw", "portrait" %}
+        {% image portrait, portraitAlt, "50vw, 100vw", "portrait bg-gray-700" %}
     </button>
     {% endfor %}
 </div>

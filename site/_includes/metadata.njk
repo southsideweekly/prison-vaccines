@@ -14,7 +14,7 @@
 <meta property="og:description" content="{{ description or page.description or site.description }}" />
 <meta property="og:type" content="{{ site.type }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-<meta property="og:image" content="{{ site.url }}/img/icon.jpg" />
+<meta property="og:image" content="{{ site.url }}{% resizeImage './src/img/collage.jpg', '1200x630' %}" />
 <meta property="og:image:alt" content="{{ title or page.title or site.title }}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -25,10 +25,9 @@
 <meta name="twitter:creator" content="{{ site.twitterAuthor }}" />
 {% endif %}
 <meta name="twitter:description" content="{{ description or page.description or site.description }}" />
-<meta name="twitter:image:src" content="{{ site.url }}/img/icon.jpg" />
+<meta name="twitter:image:src" content="{{ site.url }}{% resizeImage './src/img/collage.jpg', '1200x630' %}" />
 <meta name="twitter:image:alt" content="{{ title or page.title or site.title }}" />
 
-{# TODO: SSW Favicons #}
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{% resizeImage './src/img/icon.jpg', '16x16' %}" />
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{% resizeImage './src/img/icon.jpg', '32x32' %}" />
 <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}{% resizeImage './src/img/icon.jpg', '180x180' %}" />

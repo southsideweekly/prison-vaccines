@@ -12,7 +12,7 @@
 
   /* TODO: object-fit cover and force height slightly taller on small screens? */
   .article-bg-image {
-    @apply w-full max-w-full max-h-screen z-0;
+    @apply w-full max-w-full max-h-screen z-0 bg-white;
 
     object-fit: cover;
   }
@@ -38,6 +38,12 @@
   }
 
   .article-content {
-    @apply py-5 px-3 bg-white mb-10;
+    @apply py-5 px-3 bg-brown-bg mb-10 shadow-lg;
+  }
+
+  @screen md {
+    .article-content {
+      @apply py-8 px-6;
+    }
   }
 }

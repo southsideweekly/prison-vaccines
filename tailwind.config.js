@@ -41,6 +41,22 @@ module.exports = {
       sans: ["news-gothic-std", ...sansSerifBaseFonts],
       serif: ["adobe-caslon-pro", ...serifBaseFonts],
     },
+    extend: {
+      fontSize: {
+        "2xl": "22px",
+      },
+      colors: {
+        brown: {
+          bg: "#ede4cb",
+        },
+        red: {
+          default: "#bf3000",
+        },
+        blue: {
+          link: "#539fbb",
+        },
+      },
+    },
   },
   plugins: [],
 }

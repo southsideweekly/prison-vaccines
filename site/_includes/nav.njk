@@ -1,7 +1,10 @@
 <header class="flex flex-row items-center justify-center mb-12">
   <nav id="nav" class="max-w-screen-md flex-grow p-3">
-    <a href="https://southsideweekly.com/" aria-label="South Side Weekly">
-      {% image "./src/img/logo.png", "South Side Weekly logo", "100vw", "logo" %}
+    <a href="https://southsideweekly.com/" aria-label="South Side Weekly" class="logo-link mx-auto">
+      <picture>
+        <source type="image/webp" srcset="{% resizeImage './src/img/logo.png', '1024x150', 'webp' %}">
+        <img class="w-full" alt="South Side Weekly logo" src="{% resizeImage './src/img/logo.png', '1024x150' %}" width="1024" height="150">
+      </picture>
     </a>
   </nav>
 </header>

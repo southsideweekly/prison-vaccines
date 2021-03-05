@@ -1,8 +1,6 @@
 const production = process.env.NODE_ENV === "production"
 
-const host = production
-  ? "https://projects.southsideweekly.com"
-  : "http://localhost:8080"
+const host = production ? process.env.SITE_HOST : "http://localhost:8080"
 
 const baseurl = production ? "/prison-vaccines" : ""
 

@@ -3,6 +3,7 @@ name: CICD
 on: [push, pull_request, workflow_dispatch]
 
 env:
+  SITE_HOST: https://projects.southsideweekly.com
   GOOGLE_ANALYTICS_ID: "UA-55607504-1"
 
 jobs:
