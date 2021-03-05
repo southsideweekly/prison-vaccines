@@ -10,6 +10,7 @@ async function resizeImage(src, sizes, outputFormat = "png") {
     widths: [+sizes.split("x")[0]],
     formats: [outputFormat],
     outputDir: "./site/img",
+    urlPath: `${baseurl}/img/`,
   })
 
   const props = stats[outputFormat].slice(-1)[0]
