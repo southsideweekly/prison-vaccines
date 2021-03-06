@@ -38,6 +38,11 @@ a:focus {
   text-decoration: underline;
 }
 
+/* For alt text display */
+img {
+  @apply text-center;
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -85,7 +90,7 @@ a:focus {
 }
 
 .content h1.article-title:first-child {
-  @apply mt-8;
+  @apply mt-10;
 }
 
 .content .article-subtitle {
@@ -117,19 +122,36 @@ a:focus {
 }
 
 .portrait-grid {
-  @apply max-w-screen-lg mx-auto grid grid-cols-2 gap-2 px-3 mb-10;
+  @apply max-w-screen-lg mx-auto grid grid-cols-2 gap-2 items-start px-3 mb-10 text-center;
 }
 
-@screen md {
-  .portrait-grid {
-    @apply grid-cols-3 gap-3;
-  }
+.portrait-button .label {
+  @apply text-lg text-red block mt-2 leading-none;
 }
 
 .portrait-button:hover,
 .portrait-button:focus,
 .portrait-button:active {
   filter: brightness(70%);
+}
+
+.portrait-button:hover .label,
+.portrait-button:focus .label,
+.portrait-button:active .label {
+  @apply underline;
+}
+
+.portrait-button .portrait {
+  @apply w-full bg-orange-bg;
+}
+
+@screen md {
+  .portrait-grid {
+    @apply grid-cols-3 gap-3;
+  }
+  .portrait-button .label {
+    @apply text-xl;
+  }
 }
 
 .dropcap p:first-child:first-letter {
@@ -159,12 +181,22 @@ a:focus {
 
 @screen md {
   .side-block {
-    @apply w-1/2;
+    @apply w-1/2 my-0;
   }
   .side-block.left {
     @apply float-left mr-5 items-start;
   }
   .side-block.right {
     @apply float-right ml-5 items-end;
+  }
+}
+
+/* IE-only fixes */
+@media all and (-ms-high-contrast: none) {
+  .portrait-button .portrait {
+    max-width: 360px;
+  }
+  .article-bg-image {
+    @apply mb-20;
   }
 }

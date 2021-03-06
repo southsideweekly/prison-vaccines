@@ -4,7 +4,11 @@ permalink: /
 title: "Inmates at Stateville Correctional Center describe COVID-19 behind bars"
 ---
 <article>
-{% image "./src/img/collage.jpg", "page", "100vw", "max-w-screen-lg w-full mx-auto" %}
+<picture>
+    <source type="image/webp" media="(max-width: 600px)" srcset="{% resizeImage './src/img/collage.jpg', '600x600', 'webp' %}" />
+    <source type="image/webp" media="(min-width: 601px)" srcset="{% resizeImage './src/img/collage.jpg', '1200x1200', 'webp' %}" />
+    <img src="{% resizeImage './src/img/collage.jpg', '1200x1200', 'jpeg' %}" alt="Collage of illustrations of inmates" class="max-w-screen-lg w-full mx-auto bg-orange-bg" width="1024" height="538" />
+</picture>
 <div class="content text-center border-b pb-6 mb-12 border-black">
     <h1 class="article-title">
         Inmates at Stateville Correctional Center describe COVID-19 behind bars: ‘Everything that was done felt like a punishment’
@@ -19,6 +23,7 @@ title: "Inmates at Stateville Correctional Center describe COVID-19 behind bars"
         and
         <a href="https://southsideweekly.com/author/TK/" target="_blank" rel="noopener">Cheyanne M. Daniels</a>
     </p>
+    {# TODO: add illustration credit #}
 </div>
 <div class="dropcap content">
 {% mdBlock %}
@@ -30,12 +35,21 @@ Everything he gathers goes into an unused room, where used PPE has been amassing
 {% endmdBlock %}
 </div>
 
+<div class="content text-center">
+    <p class="italic text-2xl">
+        <a href="#gallery">In their own words below: TK</a>
+    </p>
+</div>
+
+{# 1.2 aspect ratio 1200x1000 #}
 <div class="article-section">
     <div id="bg-doc-1" class="article-bg-image-container">
-    {# TODO: Fix image resizing #}
-        {% image "./src/img/responses/page-49.jpg", "page", "100vw", "article-bg-image" %}
+        <picture>
+            <source type="image/webp" media="(max-width: 600px)" srcset="{% resizeImage './src/img/responses/page-49.jpg', '626x626', 'webp' %}" />
+            <source type="image/webp" media="(min-width: 601px)" srcset="{% resizeImage './src/img/responses/page-49-crop.jpg', '1200x1200', 'webp' %}" />
+            <img src="{% resizeImage './src/img/responses/page-49.jpg', '1200x1200', 'jpeg' %}" alt="Handwritten letter on lined, white notebook paper by Robert Cloutier" class="article-bg-image" width="1200" height="1000" />
+        </picture>
     </div>
-
     <div data-scroll-blur="bg-doc-1" class="article-content-container">
         <div class="content article-content">
 {% mdBlock %}
@@ -49,10 +63,16 @@ According to IDOC data, among the 1,091 inmates at Stateville, there have been 3
 
 {% endmdBlock %}
 <div class="side-block right">
-    <button class="portrait-button" data-modal-section="james-soto">
-        <img class="bg-gray-700" src="{% resizeImage './src/img/portraits/James Soto.jpg', '500x500' %}">
+    <button class="portrait-button" data-modal-section="robert-cloutier">
+        <picture>
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Robert Cloutier.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Robert Cloutier.jpg', '1200x1200', 'webp' %} 2x" />
+            <img src="{% resizeImage './src/img/portraits/Robert Cloutier.jpg', '600x600', 'jpeg' %}" alt="Illustration of Robert Cloutier" class="portrait" loading="lazy" decoding="async" width="360" height="240" />
+        </picture>
+        <span class="label">
+            Read Robert Cloutier's letter
+        </span>
     </button>
-    <a class="mx-auto" href="#gallery">See more letters &#8675;</a>
+    <a class="mt-4 md:mt-2 mx-auto text-lg italic" href="#gallery">Read more letters &#8675;</a>
 </div>
 {% mdBlock %}
 Incarcerated individuals are five and a half times more likely to test positive for COVID-19 and three times more likely to die from it than the general public, according to the [University of Chicago Law Review Online](https://lawreviewblog.uchicago.edu/2020/11/16/covid-dolovich/).
@@ -71,7 +91,11 @@ Inmates at Stateville Correctional Center were preparing for the arrival of the 
 
 <div class="article-section">
     <div id="bg-doc-2" class="article-bg-image-container">
-        {% image "./src/img/responses/page-26.jpg", "page", "100vw", "article-bg-image" %}
+        <picture>
+            <source type="image/webp" media="(max-width: 600px)" srcset="{% resizeImage './src/img/responses/page-26.jpg', '626x626', 'webp' %}" />
+            <source type="image/webp" media="(min-width: 601px)" srcset="{% resizeImage './src/img/responses/page-26-crop.jpg', '1200x1200', 'webp' %}" />
+            <img src="{% resizeImage './src/img/responses/page-26.jpg', '1200x1050' %}" alt="Handwritten letter on lined, white notebook paper by William La’Roy Peeples Jr." class="article-bg-image" loading="lazy" decoding="async" width="1200" height="1000" />
+        </picture>
     </div>
 
     <div data-scroll-blur="bg-doc-2" class="article-content-container">
@@ -86,7 +110,20 @@ But while not entirely enthusiastic about the vaccine, they fear the alternative
 “For me it’s not a matter of trust per say,” Stateville inmate William La’Roy Peeples Jr., fifty-six, wrote in his response. “It is about me feeling safer taking it, than trapped behind steel and concrete with the virus running rampant and having zero protection from it.”
 
 Inside overcrowded prisons, it is nearly impossible to social distance. Inmates have seen prison officials disregard safety precautions and ignore pleas for help. 
-
+{% endmdBlock %}
+<div class="side-block left">
+    <button class="portrait-button" data-modal-section="william-laroy-peeples-jr">
+        <picture>
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '1200x1200', 'webp' %} 2x" />
+            <img src="{% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '600x600', 'jpeg' %}" alt="Illustration of William La’Roy Peeples Jr." class="portrait" loading="lazy" decoding="async" width="360" height="240" />
+        </picture>
+        <span class="label">
+            Read William La’Roy Peeples Jr.'s letter
+        </span>
+    </button>
+    <a class="mt-2 mx-auto text-lg italic" href="#gallery">Read more letters &#8675;</a>
+</div>
+{% mdBlock %}
 In an effort to mitigate prison infection rates, Gov. J.B. Pritzker began granting clemencies in March 2020. 
 
 “Governor Pritzker very likely saved a lot of lives through the clemencies he granted last year and I truly believe he will save some by getting us vaccinated sooner rather than later,” said Quayshaun Bailey, twenty-eight, an inmate at Stateville Correctional Center in Joliet, Illinois.  
@@ -105,7 +142,11 @@ F-House was closed in 2016 for health and safety [concerns](https://static1.squa
 
 <div class="article-section">
     <div id="bg-doc-3" class="article-bg-image-container">
-        {% image "./src/img/responses/page-1.jpg", "page", "100vw", "article-bg-image" %}
+        <picture>
+            <source type="image/webp" media="(max-width: 600px)" srcset="{% resizeImage './src/img/responses/page-1.jpg', '626x626', 'webp' %}" />
+            <source type="image/webp" media="(min-width: 601px)" srcset="{% resizeImage './src/img/responses/page-1-crop.jpg', '1200x1200', 'webp' %}" />
+            <img src="{% resizeImage './src/img/responses/page-1.jpg', '1200x1200' %}" alt="Handwritten letter on lined, white notebook paper by Benard McKinley" class="article-bg-image" loading="lazy" decoding="async" width="1200" height="1000" />
+        </picture>
     </div>
 
     <div data-scroll-blur="bg-doc-3" class="article-content-container">
@@ -122,7 +163,20 @@ Stateville Correctional Center and IDOC did not respond to repeated requests for
 A recent [study](https://whistleblower.org/wp-content/uploads/2020/04/Irvine_JUH_ICE_COVID19_model.pdf) found that once COVID-19 enters a detention facility, it will infect between seventy-seven and ninety-nine percent of detainees within three months. Illinois has more than 30,000 inmates, according to the most recent Illinois Department of Corrections adult population [report](https://www2.illinois.gov/idoc/reportsandstatistics/Documents/October%20Fact%20Sheet.pdf). More than half of Illinois’ inmates are Black, meaning they face [additional barriers](https://www.cdc.gov/nchs/data/hus/hus15.pdf) to receiving proper medical care and are more susceptible to contracting, and dying, from the virus.  
 
 “Long before the pandemic, medical treatment in prison were way less than subpar,” said Smith. “Even after exposure they continue letting us fall by the wayside because we’re convicted criminals. They believe that our conviction nullifies our rights as U.S. citizens.”
-
+{% endmdBlock %}
+<div class="side-block right">
+    <button class="portrait-button" data-modal-section="benard-mckinley">
+        <picture>
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Benard McKinley.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Benard McKinley.jpg', '1200x1200', 'webp' %} 2x" />
+            <img src="{% resizeImage './src/img/portraits/Benard McKinley.jpg', '600x600' %}" alt="Illustration of Benard McKinley" class="portrait" loading="lazy" decoding="async" width="360" height="240" />
+        </picture>
+        <span class="label">
+            Read Benard McKinley's letter
+        </span>
+    </button>
+    <a class="mt-2 mx-auto text-lg italic" href="#gallery">Read more letters &#8675;</a>
+</div>
+{% mdBlock %}
 While prisons are required to provide medical care for inmates, it is not unusual for incarcerated people to receive inadequate health care, even resulting in some deaths. The problem is compounded by the fact that [forty percent](https://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf) of inmates have chronic health conditions. 
 
 Travis Dortch, fifty-three, who has Type 2 diabetes and hypertension, said he gets his medicine late, sometimes going weeks without it.
@@ -139,9 +193,13 @@ Hollins wrote that nurses are among the only prison employees who enforce mask w
     </div>
 </div>
 
-<div class="article-section">
+<div class="article-section last">
     <div id="bg-doc-4" class="article-bg-image-container">
-        {% image "./src/img/responses/page-52.jpg", "page", "100vw", "article-bg-image" %}
+        <picture>
+            <source type="image/webp" media="(max-width: 600px)" srcset="{% resizeImage './src/img/responses/page-52.jpg', '626x626', 'webp' %}" />
+            <source type="image/webp" media="(min-width: 601px)" srcset="{% resizeImage './src/img/responses/page-52-crop.jpg', '1200x1200', 'webp' %}" />
+            <img src="{% resizeImage './src/img/responses/page-52.jpg', '1200x1200' %}" alt="Handwritten letter on lined, yellow legal paper by Broderick Hollins, Sr." class="article-bg-image bg-yellow-paper" loading="lazy" decoding="async" width="1200" height="1000" />
+        </picture>
     </div>
 
     <div data-scroll-blur="bg-doc-4" class="article-content-container">
@@ -152,7 +210,20 @@ While so many Americans struggled to adjust to the realities of life during the 
 Visitation with loved ones was suspended, according to Stateville’s website, access to technology was further limited and movement was almost nonexistent. 
 
 “For months and months, the facility didn’t prioritize my health and wellbeing,” Lynn Green, forty, wrote. “The facility functioned more like a disciplinary lockdown, than a quarantine. We were handcuffed everywhere we went and patted down by staff with the same gloves as they searched us.”
-
+{% endmdBlock %}
+<div class="side-block left">
+    <button class="portrait-button" data-modal-section="broderick-hollins-sr">
+        <picture>
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Broderick Hollins.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Broderick Hollins.jpg', '1200x1200', 'webp' %} 2x" />
+            <img src="{% resizeImage './src/img/portraits/Broderick Hollins.jpg', '600x600' %}" alt="Illustration of Broderick Hollins, Sr." class="portrait" loading="lazy" decoding="async" width="360" height="240" />
+        </picture>
+        <span class="label">
+            Read Broderick Hollins's letter
+        </span>
+    </button>
+    <a class="mt-2 mx-auto text-lg italic" href="#gallery">Read more letters &#8675;</a>
+</div>
+{% mdBlock %}
 Isolation and inaccessibility to the few privileges usually afforded to inmates at Stateville are, for many the thirteen inmates, the most unbearable aspects of the pandemic. And although mental health counselors have a weekly check-in with inmates, Dortch said it’s hard to open up to them.
 
 “How can you tell someone who you know does not care if you live or die, about your mental problems,” Dortch wrote.
@@ -174,17 +245,35 @@ Dortch said efforts to distract himself are futile as he worries about the toll 
 {% mdBlock %}
 _Repeated requests for comment from Gov. J.B. Pritzker’s office; Lindsey Hess, media correspondent for IDOC; Caryn Stancik of Cermak Health Services did not receive a response._
 {% endmdBlock %}
+
+{# TODO: Extended credits #}
+{% mdBlock %}
+
+_Extended credits_
+{% endmdBlock %}
 </div>
+
 </article>
 
-<div id="gallery" class="portrait-grid">
+<div id="gallery" class="pt-4 mt-8 pb-10">
+    <h2 class="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-normal">
+        In their own words
+    </h2>
+    <div class="portrait-grid">
     {% for response in responses %}
     <button class="portrait-button" data-modal-section="{{ response.id }}">
         {% set portrait %}./src/img/portraits/{{ response.image }}{% endset %}
         {% set portraitAlt %}Illustration of {{ response.name }}{% endset %}
-        {% image portrait, portraitAlt, "50vw, 100vw", "portrait bg-gray-700" %}
+        <picture>
+            <source type="image/webp" srcset="{% resizeImage portrait, '400x400', 'webp' %}, {% resizeImage portrait, '800x800', 'webp' %} 2x" />
+            <img src="{% resizeImage portrait, '800x800' %}" alt="{{ portraitAlt }}" loading="lazy" decoding="async" class="portrait" width="360" height="240" />
+        </picture>
+        <span class="label">
+            {{ response.name }}
+        </span>
     </button>
     {% endfor %}
+    </div>
 </div>
 
 {% include "modal.njk" %}

@@ -32,9 +32,14 @@ const sansSerifBaseFonts = [
 module.exports = {
   important: false,
   purge: {
-    enabled: process.env.NODE_ENV === "production",
+    enabled: true,
     layers: ["base", "components", "utilities"],
-    content: ["./src/**/*.js", "./site/**/*.njk", "./site/**/*.11ty.js"],
+    content: [
+      "./src/**/*.js",
+      "./site/*.njk",
+      "./site/**/*.njk",
+      "./site/**/*.11ty.js",
+    ],
   },
   theme: {
     fontFamily: {
@@ -48,12 +53,22 @@ module.exports = {
       colors: {
         brown: {
           bg: "#ede4cb",
+          "bg-light": "#eae7de",
         },
         red: {
           default: "#bf3000",
         },
         blue: {
           link: "#539fbb",
+        },
+        gray: {
+          paper: "#f0f0f0",
+        },
+        yellow: {
+          paper: "#f3f5a7",
+        },
+        orange: {
+          bg: "#fbb21b",
         },
       },
     },

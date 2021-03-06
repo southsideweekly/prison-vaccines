@@ -5,32 +5,17 @@ const path = require("path")
 const Image = require("@11ty/eleventy-img")
 const { baseurl } = require("./site/_data/site")
 
-async function resizeImage(src, sizes, outputFormat = "png") {
+async function resizeImage(src, sizes, outputFormat = "jpeg") {
   const stats = await Image(src, {
     widths: [+sizes.split("x")[0]],
     formats: [outputFormat],
     outputDir: "./site/img",
     urlPath: `${baseurl}/img/`,
+    useCache: false,
   })
 
   const props = stats[outputFormat].slice(-1)[0]
   return props.url
-}
-
-async function imageShortcode(src, alt, sizes, cls = "") {
-  let metadata = await Image(src, {
-    widths: [500, 1024],
-    formats: ["webp", "jpeg"],
-    outputDir: "./site/img",
-    urlPath: `${baseurl}/img/`,
-  })
-  return Image.generateHTML(metadata, {
-    alt,
-    sizes,
-    class: cls,
-    loading: "lazy",
-    decoding: "async",
-  })
 }
 
 module.exports = function (eleventyConfig) {
@@ -57,8 +42,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false)
 
   eleventyConfig.addNunjucksAsyncShortcode("resizeImage", resizeImage)
-  eleventyConfig.addFilter("resizeImage", resizeImage)
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode)
 
   // Used to avoid nunjucks escaping includes of imported CSS
   // cssnano was converting media queries with ID values to "{#"

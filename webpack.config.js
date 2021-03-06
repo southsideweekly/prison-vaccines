@@ -1,6 +1,7 @@
 const path = require("path")
 const TerserPlugin = require("terser-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { baseurl } = require("./site/_data/site")
 
 const config = {
   target: "web",
@@ -15,7 +16,7 @@ const config = {
       process.env.NODE_ENV === "production"
         ? "[name].[chunkhash].js"
         : "[name].js",
-    publicPath: "/static/",
+    publicPath: `${baseurl}/static/`,
   },
   optimization:
     process.env.NODE_ENV === "production"

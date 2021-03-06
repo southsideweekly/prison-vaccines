@@ -37,7 +37,7 @@ module.exports = [
   },
   {
     id: "william-laroy-peeples-jr",
-    name: "William La'Roy Peeples Jr.",
+    name: "William La’Roy Peeples Jr.",
     image: "William LaRoy Peeples.jpg",
     pages: [26, 27, 28],
   },

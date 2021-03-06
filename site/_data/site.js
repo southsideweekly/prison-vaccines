@@ -11,6 +11,7 @@ module.exports = {
   description: "",
   type: "website",
   baseurl,
+  host,
   url: `${host}${baseurl}`,
   production,
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,

@@ -71,8 +71,6 @@ function setupModal() {
   })
 }
 
-// TODO: Highlight bits, pull quotes from letters?
-
 document.addEventListener("DOMContentLoaded", () => {
   setupModal()
   document.querySelectorAll("[data-scroll-blur]").forEach(setupScrollBlur)

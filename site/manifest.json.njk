@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
     {% for size in sizes %}
     {
       "sizes": "{{ size }}",
-      "src": "{{ site.baseurl }}{% resizeImage './src/img/icon.jpg', size %}",
+      "src": "{{ site.baseurl }}{% resizeImage './src/img/icon.jpg', size, 'png' %}",
       "type": "image/png"
     }{%- if not loop.last -%},{%- endif -%}
     {% endfor %}
