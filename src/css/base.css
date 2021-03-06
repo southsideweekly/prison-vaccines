@@ -200,3 +200,12 @@ img {
     @apply mb-20;
   }
 }
+
+/* Fix bug for desktop Safari where background extends outside image dimensions */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .article-bg-image {
+      background-color: theme("colors.brown.bg") !important;
+    }
+  }
+}
