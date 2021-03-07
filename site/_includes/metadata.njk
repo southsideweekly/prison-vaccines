@@ -7,13 +7,25 @@
 <meta name="description" content="{{ description or page.description or site.description }}">
 <meta name="author" content="{{ site.author }}">
 
-<link rel="canonical" href="{% if canonical %}{{ canonical }}{% else %}{{ site.url}}{{ page.url }}{% endif %}" />
+<link rel="canonical" href="{% if canonical %}{{ canonical }}{% else %}{{ site.url }}{{ page.url }}{% endif %}" />
 
-<meta property="og:title" content="{{ title or page.title or site.title }} | South Side Weekly" />
+<meta property="og:title" content="{{ title or page.title or site.title }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
 <meta property="og:description" content="{{ description or page.description or site.description }}" />
 <meta property="og:type" content="{{ site.type }}" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+{% if site.facebookPageId %}
+<meta property="fb:pages" content="{{ site.facebookPageId }}" />
+{% endif %}
+{% if site.publisher %}
+<meta property="article:publisher" content="http://facebook.com/southsideweekly" />
+{% endif %}
+{% if published %}
+<meta property="article:published_time" content="{{ published }}" />
+{% endif %}
+{% if page.date %}
+<meta property="article:modified_time" content="{{ page.date | dtformat }}" />
+{% endif %}
 <meta property="og:image" content="{{ site.host }}{% resizeImage './src/img/collage.jpg', '1200x630', 'jpeg' %}" />
 <meta property="og:image:alt" content="{{ title or page.title or site.title }}" />
 <meta property="og:image:width" content="1200" />
@@ -23,6 +35,11 @@
 <meta name="twitter:title" content="{{ title or page.title or site.title }}" />
 {% if site.twitterAuthor %}
 <meta name="twitter:creator" content="{{ site.twitterAuthor }}" />
+<meta name="twitter:site" content="{{ site.twitterAuthor }}" />
+{% endif %}
+{% if site.articleAuthor %}
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="{{ site.articleAuthor }}">
 {% endif %}
 <meta name="twitter:description" content="{{ description or page.description or site.description }}" />
 <meta name="twitter:image:src" content="{{ site.host }}{% resizeImage './src/img/collage.jpg', '1200x630', 'jpeg' %}" />
@@ -31,5 +48,5 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.host }}{% resizeImage './src/img/icon.jpg', '16x16', 'png' %}" />
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.host }}{% resizeImage './src/img/icon.jpg', '32x32', 'png' %}" />
 <link rel="apple-touch-icon" sizes="180x180" href="{{ site.host }}{% resizeImage './src/img/icon.jpg', '180x180', 'png' %}" />
-<link rel="manifest" href="{{ site.url }}/manifest.json" />
+<link rel="manifest" href="{{ site.url }}{{ page.url }}manifest.json" />
 <meta name="theme-color" content="#ffffff" />

@@ -9,7 +9,7 @@
                     <span class="hidden" data-section="{{ response.id }}">{{ response.name }}</span>
                     {% endfor %}
                 </h2>
-                <button id="close-modal">&times;</button>
+                <button aria-label="Close modal" id="close-modal">&times;</button>
             </div>
             <div class="py-5">
                 {% for response in responses %}
@@ -20,7 +20,7 @@
                         <img src="{% resizeImage pageFile, '800x800', 'jpeg' %}" loading="lazy" decoding="async" width="800" height="1000" alt="Page of letter written by {{ response.name }}" class="max-w-full mb-5 bg-gray-paper" />
                     {% endfor %}
                 </div>
-                <div class="visually-hidden">{# TODO: transcription for aria #}</div>
+                {# TODO: transcription for aria <div class="visually-hidden"></div> #}
                 {% endfor %}
             </div>
         </div>

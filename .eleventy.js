@@ -59,6 +59,11 @@ module.exports = function (eleventyConfig) {
     collectionApi.getAll().filter(({ data: { permalink } }) => !permalink)
   )
 
+  eleventyConfig.addFilter(
+    "dtformat",
+    (dt) => `${dt.toISOString().split(".")[0]}+00:00`
+  )
+
   eleventyConfig.addPassthroughCopy({
     "site/img": "img",
   })
