@@ -22,6 +22,7 @@ function setupScrollBlur(el) {
 
 function setupModal() {
   const modal = document.getElementById("modal")
+  let openEl = null
 
   const handleDocClick = (event) => {
     if ("modal" in event.target.dataset) {
@@ -50,6 +51,11 @@ function setupModal() {
       .querySelectorAll("[data-section]:not(.hidden)")
       .forEach((el) => el.classList.add("hidden"))
     removeListeners()
+    // Refocus to opener
+    if (openEl) {
+      openEl.focus()
+      openEl = null
+    }
   }
 
   const openModal = (sectionId) => {
@@ -67,7 +73,10 @@ function setupModal() {
   document.getElementById("close-modal").addEventListener("click", closeModal)
 
   document.querySelectorAll("[data-modal-section]").forEach((el) => {
-    el.addEventListener("click", () => openModal(el.dataset.modalSection))
+    el.addEventListener("click", () => {
+      openModal(el.dataset.modalSection)
+      openEl = el
+    })
   })
 }
 
