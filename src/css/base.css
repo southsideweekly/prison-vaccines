@@ -1,6 +1,10 @@
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
 

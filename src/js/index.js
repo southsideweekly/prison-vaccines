@@ -1,4 +1,5 @@
 import smoothscroll from "smoothscroll-polyfill"
+import "smoothscroll-anchor-polyfill"
 
 import { focusOnFirstChild, onFocusModalTrap } from "./utils"
 

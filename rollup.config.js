@@ -9,10 +9,6 @@ export default [
       file: "site/_includes/index.js",
       format: "esm",
     },
-    plugins: [
-      resolve(),
-      commonjs(),
-      ...(process.env.NODE_ENV === "production" ? [terser()] : []),
-    ],
+    plugins: [resolve(), commonjs(), terser()],
   },
 ]
