@@ -64,7 +64,7 @@ The Weekly sent inmates at Stateville who are enrolled in Northwestern Universit
 <div class="side-block right">
     <button class="portrait-button" data-modal-section="robert-cloutier">
         <picture>
-            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Robert Cloutier.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Robert Cloutier.jpg', '1200x1200', 'webp' %} 100w 2x" />
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Robert Cloutier.jpg', '600x600', 'webp' %}" />
             <img src="{% resizeImage './src/img/portraits/Robert Cloutier.jpg', '600x600', 'jpeg' %}" alt="Illustration of Robert Cloutier" class="portrait" loading="lazy" decoding="async" width="360" height="240" />
         </picture>
         <span class="label">
@@ -105,7 +105,7 @@ But while they are not entirely enthusiastic about the vaccine, they fear the al
 <div class="side-block left">
     <button class="portrait-button" data-modal-section="william-laroy-peeples-jr">
         <picture>
-            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '1200x1200', 'webp' %} 100w 2x" />
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '600x600', 'webp' %}" />
             <img src="{% resizeImage './src/img/portraits/William LaRoy Peeples.jpg', '600x600', 'jpeg' %}" alt="Illustration of William La’Roy Peeples Jr." class="portrait" loading="lazy" decoding="async" width="360" height="240" />
         </picture>
         <span class="label">
@@ -154,7 +154,7 @@ A recent [study](https://whistleblower.org/wp-content/uploads/2020/04/Irvine_JUH
 <div class="side-block right">
     <button class="portrait-button" data-modal-section="benard-mckinley">
         <picture>
-            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Benard McKinley.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Benard McKinley.jpg', '1200x1200', 'webp' %} 100w 2x" />
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Benard McKinley.jpg', '600x600', 'webp' %}" />
             <img src="{% resizeImage './src/img/portraits/Benard McKinley.jpg', '600x600' %}" alt="Illustration of Benard McKinley" class="portrait" loading="lazy" decoding="async" width="360" height="240" />
         </picture>
         <span class="label">
@@ -201,7 +201,7 @@ Visitation with loved ones was suspended, according to Stateville’s website, a
 <div class="side-block left">
     <button class="portrait-button" data-modal-section="broderick-hollins-sr">
         <picture>
-            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Broderick Hollins.jpg', '600x600', 'webp' %}, {% resizeImage './src/img/portraits/Broderick Hollins.jpg', '1200x1200', 'webp' %} 100w 2x" />
+            <source type="image/webp" srcset="{% resizeImage './src/img/portraits/Broderick Hollins.jpg', '600x600', 'webp' %}" />
             <img src="{% resizeImage './src/img/portraits/Broderick Hollins.jpg', '600x600' %}" alt="Illustration of Broderick Hollins, Sr." class="portrait" loading="lazy" decoding="async" width="360" height="240" />
         </picture>
         <span class="label">
@@ -241,7 +241,7 @@ Isolation and inaccessibility to the few privileges usually afforded to inmates 
         {% set portrait %}./src/img/portraits/{{ response.image }}{% endset %}
         {% set portraitAlt %}Illustration of {{ response.name }}{% endset %}
         <picture>
-            <source type="image/webp" srcset="{% resizeImage portrait, '400x400', 'webp' %}, {% resizeImage portrait, '800x800', 'webp' %} 100w 2x" />
+            <source type="image/webp" srcset="{% resizeImage portrait, '400x400', 'webp' %}" />
             <img src="{% resizeImage portrait, '800x800' %}" alt="{{ portraitAlt }}" loading="lazy" decoding="async" class="portrait" width="360" height="240" />
         </picture>
         <span class="label">
