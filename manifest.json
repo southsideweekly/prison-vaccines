@@ -1,0 +1,25 @@
+{
+  "name": "Everything Felt Like a Punishment | South Side Weekly",
+  "short_name": "Everything Felt Like a Punishment | South Side Weekly",
+  "icons": [
+    
+    {
+      "sizes": "48x48",
+      "src": "/prison-vaccines/prison-vaccines/img/5d9aa7dd-48.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/prison-vaccines/prison-vaccines/img/5d9aa7dd-192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/prison-vaccines/prison-vaccines/img/5d9aa7dd-512.png",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
