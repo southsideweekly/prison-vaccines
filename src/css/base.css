@@ -83,6 +83,10 @@ img {
   @apply bg-red;
 }
 
+#modal-title {
+  @apply font-normal;
+}
+
 .content .article-title {
   @apply text-3xl font-normal;
 
@@ -97,8 +101,9 @@ img {
   @apply font-normal italic text-xl;
 }
 
-.content .byline {
-  @apply font-sans uppercase text-lg;
+.content .byline,
+.content .byline:not(:last-child) {
+  @apply font-sans uppercase text-base mb-0;
 }
 
 @screen md {
@@ -110,8 +115,9 @@ img {
     @apply text-3xl;
   }
 
-  .content .byline {
-    @apply text-2xl;
+  .content .byline,
+  .content .byline:not(:last-child) {
+    @apply text-xl;
   }
 }
 
