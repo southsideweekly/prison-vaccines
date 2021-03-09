@@ -14,6 +14,7 @@ module.exports = {
   facebookPageId: "622453664466624",
   twitterAuthor: "@southsideweekly",
   articleAuthor: "Madison Muller and Cheyanne M. Daniels",
+  author: "Madison Muller and Cheyanne M. Daniels",
   baseurl,
   host,
   url: `${host}${baseurl}`,
