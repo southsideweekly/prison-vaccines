@@ -128,7 +128,7 @@ img {
 }
 
 .portrait-grid {
-  @apply max-w-screen-lg mx-auto grid grid-cols-2 gap-2 items-start px-3 mb-10 text-center;
+  @apply max-w-screen-lg mx-auto grid grid-cols-2 gap-2 items-start px-3 text-center;
 }
 
 .portrait-button .label {
