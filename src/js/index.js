@@ -1,4 +1,8 @@
+import smoothscroll from "smoothscroll-polyfill"
+
 import { focusOnFirstChild, onFocusModalTrap } from "./utils"
+
+smoothscroll.polyfill()
 
 function setupScrollBlur(el) {
   const targetEl = document.getElementById(el.dataset.scrollBlur)
