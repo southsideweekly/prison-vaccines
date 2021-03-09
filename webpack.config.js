@@ -30,8 +30,8 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules\//,
+        test: /\.m?js$/,
+        exclude: /node_modules\/(?!smoothscroll-anchor-polyfill).*/,
         use: [
           {
             loader: "babel-loader",
@@ -41,10 +41,7 @@ const config = {
                   "@babel/preset-env",
                   {
                     debug: true,
-                    targets:
-                      process.env.NODE_ENV === "production"
-                        ? [">1%", "ie 11", "not op_mini all"]
-                        : ["Last 2 Firefox versions"],
+                    targets: [">1%", "ie 11", "not op_mini all"],
                     useBuiltIns: "usage",
                     corejs: 3,
                     modules: false,
