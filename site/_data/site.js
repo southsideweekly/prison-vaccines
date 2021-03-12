@@ -8,7 +8,7 @@ module.exports = {
   name: "South Side Weekly",
   title: "Everything Felt Like a Punishment | South Side Weekly",
   description:
-    "Inmates at Stateville Correctional Center describe COVID-19 behind bars",
+    "First-person accounts of COVID-19 from Stateville Correctional Center",
   type: "article",
   publisher: "http://facebook.com/southsideweekly",
   facebookPageId: "622453664466624",
